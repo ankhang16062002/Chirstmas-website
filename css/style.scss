@@ -152,10 +152,16 @@ section {
         border-top: $border;
         border-bottom: $border;
         height: 6rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transform: scale(0);
+        transform-origin: top;
+        overflow: hidden;
 
         &.active {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transform: scale(1);
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
 
         input {
@@ -641,7 +647,10 @@ section {
             background: $black;
             border-top: $border;
             border-bottom: $border;
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transform: scale(0);
+            transform-origin: top;
+            overflow: hidden;
 
             a {
                 display: block;
@@ -649,7 +658,8 @@ section {
             }
 
             &.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                transform: scale(1);
             }
         }
     }
